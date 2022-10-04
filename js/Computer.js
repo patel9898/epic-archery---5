@@ -10,7 +10,25 @@ class Computer {
     this.height = height;
     this.image = loadImage("./assets/player.png");
 
+    this.life1 = "green";
+    this.life2 = "green";
+    this.life3 = "green";
         World.add(world, this.body);
+  }
+  life() {
+    push();
+   //write a correct code to show lives as three green rectangles in a strainght line.
+    textSize(20);
+    fill("white");
+    text("Computer", width - 310, 40);
+
+    fill(this.life1);
+    rect(width - 420, 50, 70, 30);
+    fill(this.life2);
+    rect(width - 350, 50, 70, 30);
+    fill(this.life3);
+    rect(width - 280, 50, 70, 30);
+    pop();
   }
 
    display() {
